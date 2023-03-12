@@ -1,2 +1,8 @@
-re
--e . # triggers setup.py automatically
+numpy
+pandas
+seaborn
+matplotlib
+scikit-learn
+catboost
+xgboost
+# -e . # triggers setup.py automatically
