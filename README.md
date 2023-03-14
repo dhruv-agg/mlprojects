@@ -8,6 +8,7 @@ git init
 git add README.md
 git commit -m "first commit" 
 git push -u origin main
+python3 setup.py bdist_wheel
 ```
 ### Create .gitignore 
 ```sh
@@ -29,4 +30,5 @@ touch src/pipeline/__init__.py
 touch src/logger.py           
 touch src/exceptions.py
 touch src/utils.py
+python -m src.components.data_ingestion
 ```

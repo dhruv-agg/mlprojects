@@ -130,4 +130,9 @@ dmypy.json
 .DS_Store
 
 # Catboost Files
-notebooks/catboost_info/*
+notebooks/catboost_info/
+
+# Data & Artifacts
+data/
+artifacts/
+rough.ipynb
