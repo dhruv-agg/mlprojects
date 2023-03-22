@@ -136,3 +136,4 @@ notebooks/catboost_info/
 data/
 artifacts/
 rough.ipynb
+catboost_info/

@@ -11,14 +11,14 @@ from src.components.data_transformation import DataTransformation, DataTransform
 
 from src.components.model_trainer import ModelTrainer, ModelTrainerConfig
 
-from src.configs.config import DATA_FOLDER, RAW_DATA_FILE_NAME, TEST_SIZE
+from src.configs.config import DATA_FOLDER, RAW_DATA_FILE_NAME, TEST_SIZE,ARTIFACTS_FOLDER_NAME, TRAIN_DATA_FILE_NAME, TEST_DATA_FILE_NAME, ARTIFACTS_RAW_DATA_FILE_NAME
 
 
 @dataclass
 class DataIngestionConfig:
-    train_data_path: str = os.path.join('artifacts', "train.csv")
-    test_data_path: str = os.path.join('artifacts', "test.csv")
-    raw_data_path: str = os.path.join('artifacts', "data.csv")
+    train_data_path: str = os.path.join(ARTIFACTS_FOLDER_NAME, TRAIN_DATA_FILE_NAME)
+    test_data_path: str = os.path.join(ARTIFACTS_FOLDER_NAME, TEST_DATA_FILE_NAME)
+    raw_data_path: str = os.path.join(ARTIFACTS_FOLDER_NAME,ARTIFACTS_RAW_DATA_FILE_NAME )
 
 
 class DataIngestion:

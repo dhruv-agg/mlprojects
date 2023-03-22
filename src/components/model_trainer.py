@@ -18,6 +18,7 @@ from src.exception import CustomException
 from src.logger import logging
 
 from src.utils import save_object, evaluate_models
+from src.components.hyperparameter_params import params
 from src.configs.config import MODEL_SCORING_THRESHOLD, ARTIFACTS_FOLDER_NAME, MODEL_FILE_NAME
 
 
@@ -44,14 +45,13 @@ class ModelTrainer:
                 "Decision Tree": DecisionTreeRegressor(),
                 "Gradient Boosting": GradientBoostingRegressor(),
                 "Linear Regression": LinearRegression(),
-                "K-Neighbors Classifier": KNeighborsRegressor(),
-                "XGBClassifier": XGBRegressor(),
-                "CatBoosting Classifier": CatBoostRegressor(verbose=False),
-                "AdaBoost Classifier": AdaBoostRegressor(),
+                "XGBRegressor": XGBRegressor(),
+                "CatBoosting Regressor": CatBoostRegressor(verbose=False),
+                "AdaBoost Regressor": AdaBoostRegressor(),
             }
 
             model_report: dict = evaluate_models(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test,
-                                                 models=models)
+                                                 models=models, param=params)
 
             # To get best model score from dict
             best_model_score = max(sorted(model_report.values()))

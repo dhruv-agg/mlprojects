@@ -1,6 +1,9 @@
 DATA_FOLDER = "src/data"
 RAW_DATA_FILE_NAME = 'stud.csv'
+TRAIN_DATA_FILE_NAME = 'train.csv' 
+TEST_DATA_FILE_NAME = 'test.csv'
 ARTIFACTS_FOLDER_NAME = 'artifacts'
+ARTIFACTS_RAW_DATA_FILE_NAME = 'data.csv'
 PROPROCESSOR_FILE_NAME = "proprocessor.pkl"
 MODEL_FILE_NAME = "model.pkl"
 TEST_SIZE = 0.2
